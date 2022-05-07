@@ -1,26 +1,24 @@
+import MainTemplate from '../templates/MainTemplate'
+import React from 'react'
+import {ScrollView, StyleSheet} from 'react-native'
+import {Colors} from 'react-native/Libraries/NewAppScreen'
+import Link from '../atoms/Link'
 import {useNavigation} from '@react-navigation/native'
 import {StackNavigationProp} from '@react-navigation/stack'
-import React from 'react'
-import {ScrollView, StyleSheet, Text, View} from 'react-native'
 import {StackParamList} from 'App'
-import Bold from '../atoms/Bold'
-import {Colors} from 'react-native/Libraries/NewAppScreen'
 
-type HomeScreenProp = StackNavigationProp<StackParamList, 'MainPage'>
+type MainScreenProp = StackNavigationProp<StackParamList, 'MainPage'>
 
 const MainPage = () => {
-  const navigation = useNavigation<HomeScreenProp>()
+  const navigation = useNavigation<MainScreenProp>()
 
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <Text style={styles.title}>Firebase Test 🧪👨🏻‍🔬</Text>
-        <Text style={styles.description}>
-          Hi there! This is a demo project to show the power of Firebase{' '}
-          <Bold>Custom Log Events</Bold>, <Bold>A/B Testing</Bold> and{' '}
-          <Bold>Remote Config</Bold> tools with React Native.
-        </Text>
-      </View>
+      <MainTemplate />
+      <Link
+        text="Calendar Page"
+        press={() => navigation.navigate('CalendarPage')}
+      />
     </ScrollView>
   )
 }
