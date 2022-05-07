@@ -2,14 +2,11 @@ import MainPage from './src/components/pages/MainPage'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import React from 'react'
-import {LogBox} from 'react-native'
-
-LogBox.ignoreLogs([
-  "[react-native-gesture-handler] Seems like you're using an old API with gesture components, check out new Gestures system!",
-])
+import CalendarPage from './src/components/pages/CalendarPage'
 
 export type StackParamList = {
   MainPage: undefined
+  CalendarPage: undefined
 }
 
 const Stack = createStackNavigator<StackParamList>()
@@ -22,7 +19,14 @@ const App = () => {
           name="MainPage"
           component={MainPage}
           options={{
-            title: 'Experiments',
+            title: 'PlayGround',
+          }}
+        />
+        <Stack.Screen
+          name="CalendarPage"
+          component={CalendarPage}
+          options={{
+            title: 'CalendarPage',
           }}
         />
       </Stack.Navigator>
