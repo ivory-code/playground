@@ -22,7 +22,7 @@ interface MarkingInfo {
   periods?: Array<MarkingInfo>
 }
 
-type MarkginDatesType = {
+type MarkingDatesType = {
   [key: string]: MarkingInfo
 }
 
@@ -211,13 +211,10 @@ const CalendarTemplate = () => {
     <View>
       <CalendarList
         style={styles.calendarStyle}
-        // onMonthChange={}
         horizontal
         pastScrollRange={120}
         futureScrollRange={120}
         pagingEnabled
-        // customImageDaySource={images.grid2x}
-        // customImageWeekSource={images.gridDayNames2x}
         customImageDayStyle={{
           width: '100%',
           position: 'absolute',
@@ -229,61 +226,20 @@ const CalendarTemplate = () => {
         }}
         theme={{
           calendarBackground: 'transparent',
-          'stylesheet.calendar.header': {
-            dayHeader: {
-              flex: 1,
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              fontSize: 13,
-              textAlign: 'center',
-              color: 'transparent',
-            },
-          },
+
           textMonthFontSize: 20,
-          'stylesheet.calendar.main': {
-            customImageDayStyle: {
-              width: '100%',
-              position: 'absolute',
-              top: -234,
-            },
-            customImageWeekStyle: {
-              width: '100%',
-              marginBottom: -28,
-            },
-            container: {
-              marginBottom: 66,
-            },
-            week: {
-              width: '100%',
-              marginBottom: 0,
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-            },
-            dayContainer: {
-              flex: 1,
-            },
-          },
         }}
         renderHeader={date => {
           return (
             <View style={styles.headerContainer}>
-              {/* <Image source={images.jan_string} />
-              <Image source={images.jan_number} style={styles.monthNumber} />
-              <Image source={images.gridDay} /> */}
-              <Text
-                style={{
-                  fontSize: 23,
-                  fontWeight: '700',
-                }}>
-                {date.getMonth() + 1}월
-              </Text>
+              <Text style={styles.monthText}>{date.getMonth() + 1}월</Text>
             </View>
           )
         }}
         markingType={'custom'}
         markedDates={convertMarkers}
         hideArrows={true}
+        hideDayNames={true}
         hideExtraDays={false}
         dayComponent={({date, state, marking}) => {
           return customDay(date, state, marking)
@@ -351,6 +307,12 @@ const styles = StyleSheet.create({
   },
   dayText: {
     textAlign: 'center',
+  },
+  monthText: {
+    fontSize: 23,
+    fontWeight: '700',
+    marginTop: 20,
+    marginBottom: 40,
   },
   stampModal: {
     backgroundColor: 'white',
