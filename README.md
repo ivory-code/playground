@@ -1,5 +1,5 @@
 # **React-Native-PlayGround**
-- This playground is a repo that summarizes the experimental use of React-Native's various libraries.
+- This playground summarized the experimental use of React-Native's various libraries.
 
 ## **Playlist**
 
