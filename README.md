@@ -7,6 +7,8 @@
 - ### **🔥Firebase Remote Config**
 - ### **🔥Firebase A/B Testing**
 - ### **📅React-Native-Calendars**
+- ### **📚React-Native-Pager-View**
+- ### **🎞RN-Sprite-Sheet**
 
 ## **🍎&nbsp;&nbsp; Run ios**
 
@@ -14,8 +16,6 @@
 2. <code>cd ios && pod install // cd ..</code>
 3. <code>yarn start --reset-cache</code>
 4. <code>yarn ios</code>
-   <br />
-   <br />
 
 ## **🤖&nbsp;&nbsp; Run Android**
 
