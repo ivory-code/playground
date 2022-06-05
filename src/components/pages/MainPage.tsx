@@ -19,6 +19,10 @@ const MainPage = () => {
         text="Calendar Page"
         press={() => navigation.navigate('CalendarPage')}
       />
+      <Link
+        text="Counter Page"
+        press={() => navigation.navigate('CounterPage')}
+      />
     </ScrollView>
   )
 }
