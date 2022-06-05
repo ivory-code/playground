@@ -1,4 +1,5 @@
 # **React-Native-PlayGround**
+
 - This playground summarized the experimental use of React-Native's various libraries.
 
 ## **Playlist**
@@ -9,6 +10,7 @@
 - ### **📅React-Native-Calendars**
 - ### **📚React-Native-Pager-View**
 - ### **🎞RN-Sprite-Sheet**
+- ### **♻️React-Redux / Toolkit**
 
 ## **🍎&nbsp;&nbsp; Run ios**
 
