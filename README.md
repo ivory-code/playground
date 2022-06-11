@@ -8,6 +8,7 @@
 - ### **🔥Firebase Remote Config**
 - ### **🔥Firebase A/B Testing**
 - ### **📅React-Native-Calendars**
+  - **Carousel Organisms**
 - ### **📚React-Native-Pager-View**
 - ### **🎞RN-Sprite-Sheet**
 - ### **♻️React-Redux / Toolkit**
