@@ -23,6 +23,10 @@ const MainPage = () => {
         text="Counter Page"
         press={() => navigation.navigate('CounterPage')}
       />
+      <Link
+        text="Firebase Page"
+        press={() => navigation.navigate('FirebasePage')}
+      />
     </ScrollView>
   )
 }
