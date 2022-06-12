@@ -1,18 +1,21 @@
-import MainPage from './src/components/pages/MainPage'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import React from 'react'
 import CalendarPage from './src/components/pages/CalendarPage'
 import CounterPage from './src/components/pages/CounterPage'
+import FirebasePage from './src/components/pages/FirebasePage'
+import MainPage from './src/components/pages/MainPage'
 import {persistor, store} from './src/reducers/index'
 import {Provider} from 'react-redux'
 import {PersistGate} from 'redux-persist/integration/react'
 import {SafeAreaProvider} from 'react-native-safe-area-context'
+import FirebaseNavigator from './src/navigator/FirebaseNavigator'
 
 export type StackParamList = {
   MainPage: undefined
   CalendarPage: undefined
   CounterPage: undefined
+  FirebasePage: undefined
 }
 
 const Stack = createStackNavigator<StackParamList>()
@@ -43,6 +46,14 @@ const App = () => {
                 component={CounterPage}
                 options={{
                   title: 'CounterPage',
+                }}
+              />
+              <Stack.Screen
+                name="FirebasePage"
+                component={FirebaseNavigator}
+                options={{
+                  title: 'FirebasePage',
+                  headerShown: false,
                 }}
               />
             </Stack.Navigator>
