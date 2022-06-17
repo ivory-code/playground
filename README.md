@@ -11,7 +11,10 @@
   - **Carousel Organisms**
 - ### **📚React-Native-Pager-View**
 - ### **🎞RN-Sprite-Sheet**
-- ### **♻️React-Redux / Toolkit**
+- ### **♻️Redux**
+  - **React-Redux** 
+  - **Toolkit**
+  - **Persist**
 
 ## **🍎&nbsp;&nbsp; Run ios**
 
