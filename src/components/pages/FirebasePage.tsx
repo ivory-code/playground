@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native'
 import {StackNavigationProp} from '@react-navigation/stack'
-import React from 'react'
+import React, {useCallback, useState} from 'react'
 import {
   ScrollView,
   StyleSheet,
@@ -11,11 +11,17 @@ import {
 import Link from '../atoms/Link'
 import RefreshConfig from '../atoms/RefreshButton'
 import {FirebaseNavigatorParamList} from '../../navigator/FirebaseNavigator'
+import Modal from 'react-native-modal'
 
 type FirebaseScreenProp = StackNavigationProp<FirebaseNavigatorParamList>
 
 const FirebasePage = () => {
+  const [isModalVisible, setModalVisible] = useState<boolean>(false)
   const navigation = useNavigation<FirebaseScreenProp>()
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible)
+  }
 
   return (
     <ScrollView>
@@ -33,9 +39,16 @@ const FirebasePage = () => {
         text="Test Number"
         press={() => navigation.navigate('TestNumber')}
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={toggleModal}>
         <Text style={styles.text}>Test Modal</Text>
       </TouchableOpacity>
+      <Modal isVisible={isModalVisible}>
+        <View style={{flex: 1}}>
+          <TouchableOpacity style={styles.modalButton} onPress={toggleModal}>
+            <Text style={styles.text}>Hide Modal</Text>
+          </TouchableOpacity>
+        </View>
+      </Modal>
     </ScrollView>
   )
 }
@@ -59,5 +72,17 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     fontWeight: '700',
     color: '#333',
+  },
+  modalButton: {
+    margin: 12,
+    borderWidth: 2,
+    borderColor: '#333',
+    backgroundColor: '#FFF',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 32,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })
