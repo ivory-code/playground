@@ -10,6 +10,7 @@
 - ### **📅React-Native-Calendars**
   - **Carousel Organisms**
 - ### **📚React-Native-Pager-View**
+- ### **🪟React-Native-Modal**
 - ### **🎞RN-Sprite-Sheet**
 - ### **♻️Redux**
   - **React-Redux** 
