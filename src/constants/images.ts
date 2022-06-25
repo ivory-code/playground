@@ -8,6 +8,7 @@ export const IMAGES = {
   /** firebase */
   mario: require('../assets/images/gallery/mario.png'),
   luigi: require('../assets/images/gallery/luigi.png'),
+  yoshi: require('../assets/images/gallery/yoshi.png'),
   youtube: require('../assets/images/gallery/youtube-logo.png'),
   linkedin: require('../assets/images/gallery/linkedin-logo.png'),
   instagram: require('../assets/images/gallery/instagram-logo.png'),
