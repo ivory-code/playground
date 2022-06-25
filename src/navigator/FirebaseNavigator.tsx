@@ -5,6 +5,7 @@ import TestBoolean from '../components/pages/TestBoolean'
 import TestJSON from '../components/pages/TestJSON'
 import TestString from '../components/pages/TestString'
 import TestNumber from '../components/pages/TestNumber'
+import TestModal from '../components/pages/TestModal'
 
 export type FirebaseNavigatorParamList = {
   FirebasePage: undefined
@@ -12,6 +13,7 @@ export type FirebaseNavigatorParamList = {
   TestJSON: undefined
   TestString: undefined
   TestNumber: undefined
+  TestModal: undefined
 }
 
 const FirebaseStack = createStackNavigator<FirebaseNavigatorParamList>()
@@ -52,6 +54,13 @@ const FirebaseNavigator = () => {
         component={TestNumber}
         options={{
           title: 'TestNumber',
+        }}
+      />
+      <FirebaseStack.Screen
+        name="TestModal"
+        component={TestModal}
+        options={{
+          title: 'TestModal',
         }}
       />
     </FirebaseStack.Navigator>
