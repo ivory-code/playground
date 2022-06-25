@@ -27,6 +27,7 @@ const FirebasePage = () => {
         text="Test Number"
         press={() => navigation.navigate('TestNumber')}
       />
+      <Link text="Test Modal" press={() => navigation.navigate('TestModal')} />
     </ScrollView>
   )
 }
