@@ -9,7 +9,6 @@
 - ### **🔥Firebase A/B Testing**
 - ### **📅React-Native-Calendars**
   - **Carousel Organisms**
-- ### **📚React-Native-Pager-View**
 - ### **🚪React-Native-Modal**
 - ### **🎞RN-Sprite-Sheet**
 - ### **♻️Redux**
