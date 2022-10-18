@@ -2,7 +2,7 @@
 
 - This playground summarized the experimental use of React-Native's various libraries.
 
-## **Playlist**
+## **Playlists**
 
 - ### **🔥Firebase Analytics**
 - ### **🔥Firebase Remote Config**
