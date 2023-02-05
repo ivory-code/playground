@@ -1,7 +1,5 @@
 # **React-Native-PlayGround**
 
-- This playground summarized the experimental use of React-Native's various libraries.
-
 ## **Playlists**
 
 - ### **🔥 Firebase Analytics**
